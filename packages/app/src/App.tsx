@@ -34,6 +34,10 @@ import { CatalogGraphPage } from '@backstage/plugin-catalog-graph';
 import { RequirePermission } from '@backstage/plugin-permission-react';
 import { catalogEntityCreatePermission } from '@backstage/plugin-catalog-common/alpha';
 
+import { UnifiedThemeProvider } from '@backstage/theme';
+import { customDarkTheme, customLightTheme } from './globalThemes';
+import LightIcon from '@material-ui/icons/WbSunny';
+
 const app = createApp({
   apis,
   bindRoutes({ bind }) {
@@ -53,6 +57,20 @@ const app = createApp({
       catalogIndex: catalogPlugin.routes.catalogIndex,
     });
   },
+  themes: [
+      {
+        id: 'light-theme',
+        title: 'Light',
+        variant: 'dark',
+        icon: <LightIcon />,
+        Provider: ({ children }) =>  <UnifiedThemeProvider theme={customLightTheme} children={children} />
+      },{
+        id: 'dark-theme',
+        title: 'Dark',
+        variant: 'dark',
+        Provider: ({ children }) => <UnifiedThemeProvider theme={customDarkTheme} children={children} />,
+      },    
+    ]
 });
 
 const routes = (
