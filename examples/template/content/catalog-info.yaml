@@ -2,6 +2,9 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: ${{ values.name | dump }}
+  # annotations:
+    # This also supports bitbucket/xxx/yyy
+    # circleci.com/project-slug: github/my-org/my-repo
 spec:
   type: service
   owner: user:guest

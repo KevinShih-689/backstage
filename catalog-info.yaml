@@ -7,6 +7,9 @@ metadata:
   # annotations:
   #   github.com/project-slug: backstage/backstage
   #   backstage.io/techdocs-ref: dir:.
+
+  ### This also supports bitbucket/xxx/yyy
+  #   circleci.com/project-slug: github/my-org/my-repo
 spec:
   type: website
   owner: john@example.com

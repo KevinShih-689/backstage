@@ -50,6 +50,12 @@ integrations:
     #   token: ${GHE_TOKEN}
 
 proxy:
+  ### Plugins that collect data off of external services may require the use of a proxy service. (https://circleci.com/docs/api/v1/index.html#add-an-api-token) 
+  # '/circleci/api':
+  #   target: https://circleci.com/api/v1.1
+  #   headers:
+  #     Circle-Token: ${CIRCLECI_AUTH_TOKEN}
+  
   ### Example for how to add a proxy endpoint for the frontend.
   ### A typical reason to do this is to handle HTTPS and CORS for internal services.
   # endpoints:
