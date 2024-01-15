@@ -37,6 +37,7 @@ import { catalogEntityCreatePermission } from '@backstage/plugin-catalog-common/
 import { UnifiedThemeProvider } from '@backstage/theme';
 import { customDarkTheme, customLightTheme } from './globalThemes';
 import LightIcon from '@material-ui/icons/WbSunny';
+import Brightness3Icon from '@material-ui/icons/Brightness3';
 
 const app = createApp({
   apis,
@@ -68,6 +69,7 @@ const app = createApp({
         id: 'dark-theme',
         title: 'Dark',
         variant: 'dark',
+        icon: <Brightness3Icon />,
         Provider: ({ children }) => <UnifiedThemeProvider theme={customDarkTheme} children={children} />,
       },    
     ]
