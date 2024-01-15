@@ -61,7 +61,7 @@ const app = createApp({
       {
         id: 'light-theme',
         title: 'Light',
-        variant: 'dark',
+        variant: 'light',
         icon: <LightIcon />,
         Provider: ({ children }) =>  <UnifiedThemeProvider theme={customLightTheme} children={children} />
       },{
