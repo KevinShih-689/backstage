@@ -38,6 +38,8 @@ import { UnifiedThemeProvider } from '@backstage/theme';
 import { customDarkTheme, customLightTheme } from './globalThemes';
 import LightIcon from '@material-ui/icons/WbSunny';
 import Brightness3Icon from '@material-ui/icons/Brightness3';
+import { HomepageCompositionRoot } from '@backstage/plugin-home';
+import { HomePage } from './components/home2/HomePage';
 
 const app = createApp({
   apis,
@@ -77,6 +79,9 @@ const app = createApp({
 
 const routes = (
   <FlatRoutes>
+    {/* <Route path="/" element={<HomepageCompositionRoot />}>
+      <HomePage />
+    </Route> */}
     <Route path="/" element={<Navigate to="catalog" />} />
     <Route path="/catalog" element={<CatalogIndexPage />} />
     <Route

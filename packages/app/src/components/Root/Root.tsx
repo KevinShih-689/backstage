@@ -30,6 +30,7 @@ import {
 } from '@backstage/core-components';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
+import CategoryIcon from "@material-ui/icons/Category"
 
 const useSidebarLogoStyles = makeStyles({
   root: {
@@ -68,9 +69,9 @@ export const Root = ({ children }: PropsWithChildren<{}>) => (
       </SidebarGroup>
       <SidebarDivider />
       <SidebarGroup label="Menu" icon={<MenuIcon />}>
-        {/* Global nav, not org-specific */}
-        {/* <SidebarItem icon={HomeIcon} to="catalog" text="Home" /> */}
-        <SidebarItem icon={HomeIcon} to="catalog" text="Home">
+        {/* If you want a custom home page, just replace [to="/catalog"] to [to="/"] */}
+        <SidebarItem icon={HomeIcon} to="/catalog" text="Home" />
+        <SidebarItem icon={CategoryIcon} to="catalog" text="Catalog">
           <SidebarSubmenu title="Catalog">
             <SidebarSubmenuItem
               title="Domains"
