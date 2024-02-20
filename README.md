@@ -26,7 +26,7 @@ $ yarn dev
 ```
 #### Trouble Shooting
 * ##### Export `useSyncExternalStore` was not found in `react`
-    `👎 If you get the bad feedback when you excute  yarn dev`
+    ###### 👎 If you get the bad feedback when you execute `yarn dev`
 
     ![Alt text](./readme-images/readme-01.png)
     ###### Solution:
