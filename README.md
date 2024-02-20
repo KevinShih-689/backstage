@@ -15,9 +15,14 @@
     v1.22.21
     ```
 ### How to Start
+###### Before you start, make sure your node version is v18.16.0. You can use command below to switch version be using `nvm`
 ```sh
-yarn install
-yarn dev
+$ nvm use
+```
+
+```sh
+$ yarn install
+$ yarn dev
 ```
 #### Trouble Shooting
 * ##### Export `useSyncExternalStore` was not found in `react`
