@@ -15,7 +15,7 @@
     v1.22.21
     ```
 ### How to Start
-###### Before you start, make sure your the version of nodeJS is v18.16.0. You can use command below to switch version by using `nvm`
+###### Before you start, make sure the version of nodeJS in your environment is v18.16.0. You can use command below to switch version by using `nvm`
 ```sh
 $ nvm use
 ```
