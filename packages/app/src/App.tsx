@@ -38,11 +38,26 @@ import { UnifiedThemeProvider } from '@backstage/theme';
 import { customDarkTheme, customLightTheme } from './globalThemes';
 import LightIcon from '@material-ui/icons/WbSunny';
 import Brightness3Icon from '@material-ui/icons/Brightness3';
-import { HomepageCompositionRoot } from '@backstage/plugin-home';
-import { HomePage } from './components/home2/HomePage';
+/* OAuth Login */
+import { githubAuthApiRef } from '@backstage/core-plugin-api';
+import { SignInPage } from '@backstage/core-components';
 
 const app = createApp({
   apis,
+  components: {
+    SignInPage: props => (
+      <SignInPage
+        {...props}
+        auto
+        provider={{
+          id: 'github-auth-provider',
+          title: 'GitHub',
+          message: 'Sign in using GitHubsasasasa',
+          apiRef: githubAuthApiRef
+        }}
+      />
+    ),
+  },
   bindRoutes({ bind }) {
     bind(catalogPlugin.externalRoutes, {
       createComponent: scaffolderPlugin.routes.root,

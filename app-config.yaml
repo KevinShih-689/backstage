@@ -76,14 +76,13 @@ techdocs:
 
 auth:
   # see https://backstage.io/docs/auth/ to learn about auth providers
-  providers: {}
   # Config Config for the GitHub provider
-  # environment: development
-  # providers:
-  #   github:
-  #     development:
-  #       clientId: ${ client id }
-  #       clientSecret: ${ client secret }
+  environment: development
+  providers:
+    github:
+      development:
+        clientId: 81ca3606de02e453a04e
+        clientSecret: b1903a54476805b03ea94c1fa957cb500ea6df96
 
 scaffolder:
   # see https://backstage.io/docs/features/software-templates/configuration for software template options
@@ -120,3 +119,8 @@ catalog:
     #   target: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/acme-corp.yaml
     #   rules:
     #     - allow: [User, Group]
+
+# jenkins:
+#   baseUrl: http://10.250.75.158:8080
+#   username: kevin
+#   apiKey: 117e6a43b25b7c58c5579162677f9b9b44

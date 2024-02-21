@@ -2023,6 +2023,42 @@
     "@material-ui/core" "^4.12.2"
     "@material-ui/icons" "^4.9.1"
 
+"@backstage/backend-app-api@^0.5.10":
+  version "0.5.10"
+  resolved "https://registry.yarnpkg.com/@backstage/backend-app-api/-/backend-app-api-0.5.10.tgz#ec0cbebe9c2aebdfce6605bcafb8696bb1959a02"
+  integrity sha512-eD6CeHWaNsSjs3zHgQ8qio4kzqtnIgzAH71aUwaiOiiibtsBiueRCCmYNbibbEh/9eSZEm6nl0eIk0bKCDvnHQ==
+  dependencies:
+    "@backstage/backend-common" "^0.20.1"
+    "@backstage/backend-plugin-api" "^0.6.9"
+    "@backstage/backend-tasks" "^0.5.14"
+    "@backstage/cli-common" "^0.1.13"
+    "@backstage/cli-node" "^0.2.2"
+    "@backstage/config" "^1.1.1"
+    "@backstage/config-loader" "^1.6.1"
+    "@backstage/errors" "^1.2.3"
+    "@backstage/plugin-auth-node" "^0.4.3"
+    "@backstage/plugin-permission-node" "^0.7.20"
+    "@backstage/types" "^1.1.1"
+    "@manypkg/get-packages" "^1.1.3"
+    "@types/cors" "^2.8.6"
+    "@types/express" "^4.17.6"
+    compression "^1.7.4"
+    cors "^2.8.5"
+    express "^4.17.1"
+    express-promise-router "^4.1.0"
+    fs-extra "10.1.0"
+    helmet "^6.0.0"
+    lodash "^4.17.21"
+    logform "^2.3.2"
+    minimatch "^5.0.0"
+    minimist "^1.2.5"
+    morgan "^1.10.0"
+    node-forge "^1.3.1"
+    selfsigned "^2.0.0"
+    stoppable "^1.1.0"
+    winston "^3.2.1"
+    winston-transport "^4.5.0"
+
 "@backstage/backend-app-api@^0.5.9":
   version "0.5.9"
   resolved "https://registry.yarnpkg.com/@backstage/backend-app-api/-/backend-app-api-0.5.9.tgz#904030e4c23781ed5848c11e736470aab731727a"
@@ -2120,10 +2156,76 @@
     yauzl "^2.10.0"
     yn "^4.0.0"
 
+"@backstage/backend-common@^0.20.1":
+  version "0.20.1"
+  resolved "https://registry.yarnpkg.com/@backstage/backend-common/-/backend-common-0.20.1.tgz#e9b8bc7d7251ea57b2db52d7c6619dd74caa959f"
+  integrity sha512-VI3b2Bio+ne/IgVhKh6wP+ogqBVV+vo8ck/n0RHwtukpRc0Gx92M+LPfqf4UxlV7fvY2tYSFXtXLXupeW8aWfQ==
+  dependencies:
+    "@aws-sdk/abort-controller" "^3.347.0"
+    "@aws-sdk/client-s3" "^3.350.0"
+    "@aws-sdk/credential-providers" "^3.350.0"
+    "@aws-sdk/types" "^3.347.0"
+    "@backstage/backend-app-api" "^0.5.10"
+    "@backstage/backend-dev-utils" "^0.1.3"
+    "@backstage/backend-plugin-api" "^0.6.9"
+    "@backstage/cli-common" "^0.1.13"
+    "@backstage/config" "^1.1.1"
+    "@backstage/config-loader" "^1.6.1"
+    "@backstage/errors" "^1.2.3"
+    "@backstage/integration" "^1.8.0"
+    "@backstage/integration-aws-node" "^0.1.8"
+    "@backstage/types" "^1.1.1"
+    "@google-cloud/storage" "^7.0.0"
+    "@keyv/memcache" "^1.3.5"
+    "@keyv/redis" "^2.5.3"
+    "@kubernetes/client-node" "0.20.0"
+    "@manypkg/get-packages" "^1.1.3"
+    "@octokit/rest" "^19.0.3"
+    "@types/cors" "^2.8.6"
+    "@types/dockerode" "^3.3.0"
+    "@types/express" "^4.17.6"
+    "@types/luxon" "^3.0.0"
+    "@types/webpack-env" "^1.15.2"
+    archiver "^6.0.0"
+    base64-stream "^1.0.0"
+    compression "^1.7.4"
+    concat-stream "^2.0.0"
+    cors "^2.8.5"
+    dockerode "^3.3.1"
+    express "^4.17.1"
+    express-promise-router "^4.1.0"
+    fs-extra "10.1.0"
+    git-url-parse "^13.0.0"
+    helmet "^6.0.0"
+    isomorphic-git "^1.23.0"
+    jose "^4.6.0"
+    keyv "^4.5.2"
+    knex "^3.0.0"
+    lodash "^4.17.21"
+    logform "^2.3.2"
+    luxon "^3.0.0"
+    minimatch "^5.0.0"
+    mysql2 "^2.2.5"
+    node-fetch "^2.6.7"
+    p-limit "^3.1.0"
+    pg "^8.11.3"
+    raw-body "^2.4.1"
+    tar "^6.1.12"
+    uuid "^8.3.2"
+    winston "^3.2.1"
+    winston-transport "^4.5.0"
+    yauzl "^2.10.0"
+    yn "^4.0.0"
+
 "@backstage/backend-dev-utils@^0.1.2":
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/@backstage/backend-dev-utils/-/backend-dev-utils-0.1.2.tgz#357f2b669bed0452d9dca511e35a61071c57ea20"
   integrity sha512-R7ouSSSHDGMWVoME8DL4RtzUrKOVt6+NAo2EAO0EI3aWhm6IxHrLuYG8yTWEWrqUgTFAkaOwdknI/jbZwFwLUw==
+
+"@backstage/backend-dev-utils@^0.1.3":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@backstage/backend-dev-utils/-/backend-dev-utils-0.1.3.tgz#31412b8e14027718a7cf229474e032acd862a1a3"
+  integrity sha512-vq0zdpiAuMMAsaWavpCwmA4psi2EFoYmDEP5Kk9xU+jcDMTAH+ArNY+sn6fZ/6cA7IJEYNu6pFFEAXfn+dh6yg==
 
 "@backstage/backend-openapi-utils@^0.1.1":
   version "0.1.1"
@@ -2157,12 +2259,45 @@
     express "^4.17.1"
     knex "^3.0.0"
 
+"@backstage/backend-plugin-api@^0.6.9":
+  version "0.6.9"
+  resolved "https://registry.yarnpkg.com/@backstage/backend-plugin-api/-/backend-plugin-api-0.6.9.tgz#da43371efb576079dc51a023db8075ea14ba2870"
+  integrity sha512-NKRft/mK8SqNQw01QHGpwaAc4MhRh8HaAFtWrcQex746vMr8dqwspvr8KVALIkOodVrsS9oq4VnNDSVtnCBmUA==
+  dependencies:
+    "@backstage/backend-tasks" "^0.5.14"
+    "@backstage/config" "^1.1.1"
+    "@backstage/plugin-auth-node" "^0.4.3"
+    "@backstage/plugin-permission-common" "^0.7.12"
+    "@backstage/types" "^1.1.1"
+    "@types/express" "^4.17.6"
+    express "^4.17.1"
+    knex "^3.0.0"
+
 "@backstage/backend-tasks@^0.5.13":
   version "0.5.13"
   resolved "https://registry.yarnpkg.com/@backstage/backend-tasks/-/backend-tasks-0.5.13.tgz#535cd0f70f9c79e66cf2033401eecb1f4545138d"
   integrity sha512-zMMNEolfi5dRWuom74n1piRp9Tkjc68SBNiMKSRvfEDjstTgACChVWl/Mt55LfLAZfKCynjZG1IBErxob5p6Ug==
   dependencies:
     "@backstage/backend-common" "^0.20.0"
+    "@backstage/config" "^1.1.1"
+    "@backstage/errors" "^1.2.3"
+    "@backstage/types" "^1.1.1"
+    "@opentelemetry/api" "^1.3.0"
+    "@types/luxon" "^3.0.0"
+    cron "^2.0.0"
+    knex "^3.0.0"
+    lodash "^4.17.21"
+    luxon "^3.0.0"
+    uuid "^8.0.0"
+    winston "^3.2.1"
+    zod "^3.22.4"
+
+"@backstage/backend-tasks@^0.5.14":
+  version "0.5.14"
+  resolved "https://registry.yarnpkg.com/@backstage/backend-tasks/-/backend-tasks-0.5.14.tgz#0c0022339daf528ecd6d39fca891642b5ed7ddb5"
+  integrity sha512-bVRAOM86lhOk/tG0z+oXvPdIqtusgPxMO93WaayXbr0R7Tx4Ogp8pg49s7XU4WB7Mdq+fmyiqp1VQt0NR3FCwQ==
+  dependencies:
+    "@backstage/backend-common" "^0.20.1"
     "@backstage/config" "^1.1.1"
     "@backstage/errors" "^1.2.3"
     "@backstage/types" "^1.1.1"
@@ -2225,6 +2360,20 @@
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@backstage/cli-node/-/cli-node-0.2.1.tgz#7e7da0d6f3471e6843c55b547694def7dce9ee4a"
   integrity sha512-S67miZbAjVVlQrLyc0hyci4grtSFcnh25Hg9XkPKs28bYEXFC6d0246sl0gpSG9+EMO2TdVQezwVfV3pZn/41w==
+  dependencies:
+    "@backstage/cli-common" "^0.1.13"
+    "@backstage/errors" "^1.2.3"
+    "@backstage/types" "^1.1.1"
+    "@manypkg/get-packages" "^1.1.3"
+    "@yarnpkg/parsers" "^3.0.0-rc.4"
+    fs-extra "10.1.0"
+    semver "^7.5.3"
+    zod "^3.22.4"
+
+"@backstage/cli-node@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@backstage/cli-node/-/cli-node-0.2.2.tgz#f7a6062da90a20ce9d1af161ed841fbeb96337b8"
+  integrity sha512-YsEeT3sAF2sxNXv7IyI/d73TEZnivSBpyiJ4STnVpFi00woN440NeRWZfqaabS1XiuGbQibxJT3xTxORw1tMFA==
   dependencies:
     "@backstage/cli-common" "^0.1.13"
     "@backstage/errors" "^1.2.3"
@@ -2354,6 +2503,28 @@
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/@backstage/config-loader/-/config-loader-1.6.0.tgz#f3486f099923838620f7e557753e0180a05cc955"
   integrity sha512-T8knDbAJYdTqvXqXwyzRQiKQwjeBasy5I7wgKCCzM7xuZSswN6C2Y7Ljx0qmdVHejKclVxXpiUq5uRB9b0IVjg==
+  dependencies:
+    "@backstage/cli-common" "^0.1.13"
+    "@backstage/config" "^1.1.1"
+    "@backstage/errors" "^1.2.3"
+    "@backstage/types" "^1.1.1"
+    "@types/json-schema" "^7.0.6"
+    ajv "^8.10.0"
+    chokidar "^3.5.2"
+    fs-extra "10.1.0"
+    json-schema "^0.4.0"
+    json-schema-merge-allof "^0.8.1"
+    json-schema-traverse "^1.0.0"
+    lodash "^4.17.21"
+    minimist "^1.2.5"
+    node-fetch "^2.6.7"
+    typescript-json-schema "^0.62.0"
+    yaml "^2.0.0"
+
+"@backstage/config-loader@^1.6.1":
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/@backstage/config-loader/-/config-loader-1.6.1.tgz#bd5bc282cddc3b26dd0346962f814bad5dbe164b"
+  integrity sha512-wWbM7LGrN559HPzAKMczpv2mv1OXvhtgBMCgFw0jHZx5IrR3bdRZRapFQ8rmZAtj76vSLZv58qZfpOkSR6cWVQ==
   dependencies:
     "@backstage/cli-common" "^0.1.13"
     "@backstage/config" "^1.1.1"
@@ -2973,6 +3144,29 @@
     zod "^3.22.4"
     zod-to-json-schema "^3.21.4"
 
+"@backstage/plugin-auth-node@^0.4.3":
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/@backstage/plugin-auth-node/-/plugin-auth-node-0.4.3.tgz#87522b4a29824f9f160cf4087a6b02ae7adb735d"
+  integrity sha512-dIavrhNjsgxSLgm7CP+sc6YdoA6J4eVuS8Jl5vmt1jhX6Gc2DZMjPRglO2QVotWa3Ucl1tBa+GZxLGOwDetAWg==
+  dependencies:
+    "@backstage/backend-common" "^0.20.1"
+    "@backstage/backend-plugin-api" "^0.6.9"
+    "@backstage/catalog-client" "^1.5.2"
+    "@backstage/catalog-model" "^1.4.3"
+    "@backstage/config" "^1.1.1"
+    "@backstage/errors" "^1.2.3"
+    "@backstage/types" "^1.1.1"
+    "@types/express" "*"
+    "@types/passport" "^1.0.3"
+    express "^4.17.1"
+    jose "^4.6.0"
+    lodash "^4.17.21"
+    node-fetch "^2.6.7"
+    passport "^0.7.0"
+    winston "^3.2.1"
+    zod "^3.22.4"
+    zod-to-json-schema "^3.21.4"
+
 "@backstage/plugin-catalog-backend-module-scaffolder-entity-model@^0.1.5":
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/@backstage/plugin-catalog-backend-module-scaffolder-entity-model/-/plugin-catalog-backend-module-scaffolder-entity-model-0.1.5.tgz#9ac6beb3c67bc40f3acfcef269bc5eb370bb803b"
@@ -3110,6 +3304,20 @@
     "@backstage/plugin-catalog-common" "^1.0.19"
     "@backstage/plugin-permission-common" "^0.7.11"
     "@backstage/plugin-permission-node" "^0.7.19"
+    "@backstage/types" "^1.1.1"
+
+"@backstage/plugin-catalog-node@^1.6.1":
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/@backstage/plugin-catalog-node/-/plugin-catalog-node-1.6.1.tgz#9a872dfdc562f79cb1e3a5873028abaf5ae0b4f9"
+  integrity sha512-mYNzcCUy9s28/SymS0p1mPmjtRQBfICAS2lFUKfKFT6pXQ7sqnC0Cxcn9ln1XjS3+ikxFC7jfYs4EOrv2DVm7w==
+  dependencies:
+    "@backstage/backend-plugin-api" "^0.6.9"
+    "@backstage/catalog-client" "^1.5.2"
+    "@backstage/catalog-model" "^1.4.3"
+    "@backstage/errors" "^1.2.3"
+    "@backstage/plugin-catalog-common" "^1.0.20"
+    "@backstage/plugin-permission-common" "^0.7.12"
+    "@backstage/plugin-permission-node" "^0.7.20"
     "@backstage/types" "^1.1.1"
 
 "@backstage/plugin-catalog-react@^1.9.2":
@@ -3307,6 +3515,55 @@
     react-use "^17.2.4"
     zod "^3.22.4"
 
+"@backstage/plugin-jenkins-backend@^0.3.3":
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/@backstage/plugin-jenkins-backend/-/plugin-jenkins-backend-0.3.3.tgz#ae6fb324b56b6d3bb8d67ecd9317656030ebfe5c"
+  integrity sha512-WAjZwTbBkz2KqqXvYagdfJ3QZiYnleGCPIEeUMn4483OeOjtRPJGwzBrHa4iVQ836k6x36AQbet8J10RSjOJKQ==
+  dependencies:
+    "@backstage/backend-common" "^0.20.1"
+    "@backstage/backend-plugin-api" "^0.6.9"
+    "@backstage/catalog-client" "^1.5.2"
+    "@backstage/catalog-model" "^1.4.3"
+    "@backstage/config" "^1.1.1"
+    "@backstage/errors" "^1.2.3"
+    "@backstage/plugin-auth-node" "^0.4.3"
+    "@backstage/plugin-catalog-node" "^1.6.1"
+    "@backstage/plugin-jenkins-common" "^0.1.23"
+    "@backstage/plugin-permission-common" "^0.7.12"
+    "@backstage/plugin-permission-node" "^0.7.20"
+    "@types/express" "^4.17.6"
+    express "^4.17.1"
+    express-promise-router "^4.1.0"
+    jenkins "^1.0.0"
+    node-fetch "^2.6.7"
+    winston "^3.2.1"
+    yn "^4.0.0"
+
+"@backstage/plugin-jenkins-common@^0.1.23":
+  version "0.1.23"
+  resolved "https://registry.yarnpkg.com/@backstage/plugin-jenkins-common/-/plugin-jenkins-common-0.1.23.tgz#7cd1fdbac3006da6b62dd97c41f9842e4ac75597"
+  integrity sha512-D20TCVnVUeWJtRKriCkumQqhqS9R+Sb1pgs3zYo+m/lECgWOEZKt+/e1zH33QnvOsYrXg73rLWYtfhVlHdWCvQ==
+  dependencies:
+    "@backstage/plugin-catalog-common" "^1.0.20"
+    "@backstage/plugin-permission-common" "^0.7.12"
+
+"@backstage/plugin-jenkins@^0.9.4":
+  version "0.9.4"
+  resolved "https://registry.yarnpkg.com/@backstage/plugin-jenkins/-/plugin-jenkins-0.9.4.tgz#af87b5fa03841ab760be67c0af0f24cbc335f763"
+  integrity sha512-SBjgKeV2lFZEQBEVnWkxWq6EtLFn5PotVEkKLTPoI8l4jABLDiNOBBfIFjWW9r5EIZ6hpZ1Z5yq64inRP3nmQw==
+  dependencies:
+    "@backstage/catalog-model" "^1.4.3"
+    "@backstage/core-components" "^0.13.10"
+    "@backstage/core-plugin-api" "^1.8.2"
+    "@backstage/errors" "^1.2.3"
+    "@backstage/plugin-catalog-react" "^1.9.3"
+    "@backstage/plugin-jenkins-common" "^0.1.23"
+    "@material-ui/core" "^4.12.2"
+    "@material-ui/icons" "^4.9.1"
+    "@types/react" "^16.13.1 || ^17.0.0"
+    luxon "^3.0.0"
+    react-use "^17.2.4"
+
 "@backstage/plugin-org@^0.6.18":
   version "0.6.18"
   resolved "https://registry.yarnpkg.com/@backstage/plugin-org/-/plugin-org-0.6.18.tgz#dfd752d439d60e861f0e04e1b4fad071e6f29d0b"
@@ -3363,6 +3620,23 @@
     "@backstage/errors" "^1.2.3"
     "@backstage/plugin-auth-node" "^0.4.2"
     "@backstage/plugin-permission-common" "^0.7.11"
+    "@types/express" "^4.17.6"
+    express "^4.17.1"
+    express-promise-router "^4.1.0"
+    zod "^3.22.4"
+    zod-to-json-schema "^3.20.4"
+
+"@backstage/plugin-permission-node@^0.7.20":
+  version "0.7.20"
+  resolved "https://registry.yarnpkg.com/@backstage/plugin-permission-node/-/plugin-permission-node-0.7.20.tgz#172b1d36e5cf3cf2ead992fa495d054eea45fb11"
+  integrity sha512-OQD6R+n0AYC+o/jdAePrjdIYKNhssuimfx7plx7wcsTF9xz6Mpxj1zUvVp+zgDoNub2prG0Bd9H+tw0ATtAGgw==
+  dependencies:
+    "@backstage/backend-common" "^0.20.1"
+    "@backstage/backend-plugin-api" "^0.6.9"
+    "@backstage/config" "^1.1.1"
+    "@backstage/errors" "^1.2.3"
+    "@backstage/plugin-auth-node" "^0.4.3"
+    "@backstage/plugin-permission-common" "^0.7.12"
     "@types/express" "^4.17.6"
     express "^4.17.1"
     express-promise-router "^4.1.0"
@@ -9486,6 +9760,8 @@ anymatch@^3.0.3, anymatch@~3.1.2:
     "@backstage/plugin-catalog-import" "^0.10.4"
     "@backstage/plugin-catalog-react" "^1.9.2"
     "@backstage/plugin-github-actions" "^0.6.9"
+    "@backstage/plugin-home" "^0.6.1"
+    "@backstage/plugin-jenkins" "^0.9.4"
     "@backstage/plugin-org" "^0.6.18"
     "@backstage/plugin-permission-react" "^0.4.18"
     "@backstage/plugin-scaffolder" "^1.17.0"
@@ -15295,6 +15571,13 @@ jake@^10.8.5:
     filelist "^1.0.4"
     minimatch "^3.1.2"
 
+jenkins@^1.0.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/jenkins/-/jenkins-1.1.0.tgz#be61a07223d076956f357cc324fd18c5b281fcb7"
+  integrity sha512-oLiVMCt5pKp3N3br7P4Fknm5Qyu0katGc4WAhokFtPSE/waePCphK/XST9Fs/srrRY4VtN5wvI79r81fIjZkpg==
+  dependencies:
+    papi "^1.1.0"
+
 jest-changed-files@^29.7.0:
   version "29.7.0"
   resolved "https://registry.yarnpkg.com/jest-changed-files/-/jest-changed-files-29.7.0.tgz#1c06d07e77c78e1585d020424dedc10d6e17ac3a"
@@ -18658,6 +18941,11 @@ pako@^1.0.10, pako@~1.0.2, pako@~1.0.5:
   version "1.0.11"
   resolved "https://registry.yarnpkg.com/pako/-/pako-1.0.11.tgz#6c9599d340d54dfd3946380252a35705a6b992bf"
   integrity sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw==
+
+papi@^1.1.0:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/papi/-/papi-1.1.2.tgz#5b1d7686834bec489f1f823103c5e8554f2b984f"
+  integrity sha512-cwM6pPpfAYgPe3EQi23SmB5J5s4XFS9lou9z63I5BbnMGmFaR8LAKvKboW7n1IUAKj76OtnyK0YU16JjnZrqVg==
 
 param-case@^3.0.4:
   version "3.0.4"

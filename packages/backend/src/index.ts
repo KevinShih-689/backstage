@@ -22,6 +22,7 @@ import {
 import { TaskScheduler } from '@backstage/backend-tasks';
 import { Config } from '@backstage/config';
 import app from './plugins/app';
+// import jenkins from './plugins/jenkins';
 import auth from './plugins/auth';
 import catalog from './plugins/catalog';
 import scaffolder from './plugins/scaffolder';
@@ -81,6 +82,7 @@ async function main() {
   const catalogEnv = useHotMemoize(module, () => createEnv('catalog'));
   const scaffolderEnv = useHotMemoize(module, () => createEnv('scaffolder'));
   const authEnv = useHotMemoize(module, () => createEnv('auth'));
+  // const jenkinsEnv = useHotMemoize(module, () => createEnv('jenkins'));
   const proxyEnv = useHotMemoize(module, () => createEnv('proxy'));
   const techdocsEnv = useHotMemoize(module, () => createEnv('techdocs'));
   const searchEnv = useHotMemoize(module, () => createEnv('search'));
@@ -88,6 +90,7 @@ async function main() {
 
   const apiRouter = Router();
   apiRouter.use('/catalog', await catalog(catalogEnv));
+  // apiRouter.use('/jenkins', await jenkins(jenkinsEnv));
   apiRouter.use('/scaffolder', await scaffolder(scaffolderEnv));
   apiRouter.use('/auth', await auth(authEnv));
   apiRouter.use('/techdocs', await techdocs(techdocsEnv));
