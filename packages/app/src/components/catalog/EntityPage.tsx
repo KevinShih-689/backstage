@@ -54,12 +54,18 @@ import {
   RELATION_PART_OF,
   RELATION_PROVIDES_API,
 } from '@backstage/catalog-model';
-// CircleCI Component
+/* CircleCI Plugin */ 
 import {
   EntityCircleCIContent,
   isCircleCIAvailable,
 } from '@circleci/backstage-plugin';
-
+/* Jenkins Plugin */
+import {
+  EntityJenkinsContent,
+  EntityLatestJenkinsRunCard,
+  isJenkinsAvailable,
+} from '@backstage/plugin-jenkins';
+/* TechDocs Plugin */
 import { TechDocsAddons } from '@backstage/plugin-techdocs-react';
 import { ReportIssue } from '@backstage/plugin-techdocs-module-addons-contrib';
 
@@ -76,6 +82,11 @@ const cicdContent = (
   // You can for example enforce that all components of type 'service' should use GitHubActions
 
   <EntitySwitch>
+    {/** Jenkins Component **/}
+    <EntitySwitch.Case if={isJenkinsAvailable}>
+      <EntityJenkinsContent />
+    </EntitySwitch.Case>
+    {/** GitHub Action Component **/}
     <EntitySwitch.Case if={isGithubActionsAvailable}>
       <EntityGithubActionsContent />
     </EntitySwitch.Case>
@@ -132,22 +143,36 @@ const entityWarningContent = (
 );
 
 const overviewContent = (
-  <Grid container spacing={3} alignItems="stretch">
+  <div>
+    {/* Warning */}
     {entityWarningContent}
-    <Grid item md={6}>
-      <EntityAboutCard variant="gridItem" />
+    {/* Jenkins Component */}
+    <EntitySwitch>
+      <EntitySwitch.Case if={isJenkinsAvailable}>
+        <Grid item sm={12}>
+          <EntityLatestJenkinsRunCard
+            branch="master"
+            variant="gridItem"
+          />
+        </Grid>
+      </EntitySwitch.Case>
+    </EntitySwitch>
+    {/* Basic Information Component */}
+    <Grid container spacing={3} alignItems="stretch">
+      <Grid item md={6}>
+        <EntityAboutCard variant="gridItem" />
+      </Grid>
+      <Grid item md={6} xs={12}>
+        <EntityCatalogGraphCard variant="gridItem" height={400} />
+      </Grid>
+      <Grid item md={4} xs={12}>
+        <EntityLinksCard />
+      </Grid>
+      <Grid item md={8} xs={12}>
+        <EntityHasSubcomponentsCard variant="gridItem" />
+      </Grid>
     </Grid>
-    <Grid item md={6} xs={12}>
-      <EntityCatalogGraphCard variant="gridItem" height={400} />
-    </Grid>
-
-    <Grid item md={4} xs={12}>
-      <EntityLinksCard />
-    </Grid>
-    <Grid item md={8} xs={12}>
-      <EntityHasSubcomponentsCard variant="gridItem" />
-    </Grid>
-  </Grid>
+  </div>
 );
 
 const serviceEntityPage = (

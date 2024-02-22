@@ -119,8 +119,7 @@ catalog:
     #   target: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/acme-corp.yaml
     #   rules:
     #     - allow: [User, Group]
-
-# jenkins:
-#   baseUrl: http://10.250.75.158:8080
-#   username: kevin
-#   apiKey: 117e6a43b25b7c58c5579162677f9b9b44
+jenkins:
+  baseUrl: http://10.250.75.158:8080
+  username: kevin
+  apiKey: 117e6a43b25b7c58c5579162677f9b9b44
