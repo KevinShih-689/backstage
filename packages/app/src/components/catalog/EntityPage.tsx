@@ -38,7 +38,6 @@ import {
   EntityMembersListCard,
   EntityOwnershipCard,
 } from '@backstage/plugin-org';
-import { EntityTechdocsContent } from '@backstage/plugin-techdocs';
 import { EmptyState } from '@backstage/core-components';
 import {
   Direction,
@@ -66,6 +65,7 @@ import {
   isJenkinsAvailable,
 } from '@backstage/plugin-jenkins';
 /* TechDocs Plugin */
+import { EntityTechdocsContent } from '@backstage/plugin-techdocs';
 import { TechDocsAddons } from '@backstage/plugin-techdocs-react';
 import { ReportIssue } from '@backstage/plugin-techdocs-module-addons-contrib';
 
